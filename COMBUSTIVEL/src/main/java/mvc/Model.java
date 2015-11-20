@@ -44,10 +44,10 @@ public class Model {
 
   public void ifResultado() {
     if (resultado < 0.7) {
-      imprimir = "Use Alcool";
+      imprimir = "Use Alcool !";
     } 
     else {
-      imprimir = "Use Gasolina";
+      imprimir = "Use Gasolina !";
     }
   }
 

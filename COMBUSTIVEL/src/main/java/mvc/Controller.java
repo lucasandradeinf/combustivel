@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(value = "/aaa")
+@WebServlet(value = "/combustivel")
 public class Controller extends HttpServlet {
 
 protected void service(
@@ -31,7 +31,7 @@ protected void service(
     req.setAttribute("resultado", cImc); //Passando um objeto para o JSP.
     
     //Chamar o JSP apenas para mostrar o resultado.
-    req.getRequestDispatcher("gasolina.jsp").forward(req, resp);
+    req.getRequestDispatcher("combustivel.jsp").forward(req, resp);
   }
 
 

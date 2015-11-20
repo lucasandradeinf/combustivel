@@ -31,11 +31,11 @@
             <form role="form">
               <fieldset>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Palcool" name="palcool"
+                  <input class="form-control" placeholder="Preço do Álcool" name="palcool"
                     type="text" value="${param.palcool}">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Pgasolina" name="pgasolina"
+                  <input class="form-control" placeholder="Preço da Gasolina" name="pgasolina"
                     type="text" value="${param.pgasolina}">
                 </div>
                 <input type="submit" class="btn btn-sm btn-success" value="Calcular">
@@ -49,15 +49,15 @@
             if (calculoCombustivel.getPalcool() == 0 || calculoCombustivel.getPgasolina() == 0) {
 %>
 <!-- Aqui posso colocar HTML. -->
-<div class="alert alert-danger" role="alert">Coloque algum valor nos campos Alcool e Gasolina.</div>
+<div class="alert alert-danger" role="alert">Entre com os valores do Álcool e da Gasolina.</div>
 <%
             } else {
               %>
 <!-- Aqui posso colocar HTML. -->
 <div class="alert alert-success" role="alert">
-Resultado: <% calculoCombustivel.getResultado();%>
+Resultado: <%=calculoCombustivel.getResultado()%>
 <br>
-Imprimir: ${calculoCombustivel.imprimir}
+<%=calculoCombustivel.getImprimir()%>
 </div>
               <%
             }
